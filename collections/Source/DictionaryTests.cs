@@ -1,10 +1,9 @@
 ﻿namespace collections.Source
 {
-	public class DictionaryTests : ITest
+	public sealed class DictionaryTests : ATest, ITest
 	{
 		public DictionaryTests(int size)
 		{
-			
 		}
 
 		public void Add()
