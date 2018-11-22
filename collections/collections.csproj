@@ -44,7 +44,10 @@
     <Compile Include="Source\DictionaryTests.cs" />
     <Compile Include="Source\HashSetTests.cs" />
     <Compile Include="Source\ITest.cs" />
+    <Compile Include="Source\LinkedListTests.cs" />
     <Compile Include="Source\ListTests.cs" />
+    <Compile Include="Source\QueueTests.cs" />
+    <Compile Include="Source\StackTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
