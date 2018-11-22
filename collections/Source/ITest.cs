@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-
-namespace collections.Source
+﻿namespace collections.Source
 {
 	public interface ITest
 	{

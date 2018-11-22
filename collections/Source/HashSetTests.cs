@@ -5,7 +5,7 @@ namespace collections.Source
 {
 	public sealed class HashSetTests : ATest, ITest
 	{
-		private HashSet<object> _coll = new HashSet<object>();
+		private readonly HashSet<object> _collection = new HashSet<object>();
 		private readonly int _size;
 
 		public HashSetTests(int size)
@@ -18,11 +18,11 @@ namespace collections.Source
 			Sw.Start();
 			for (int i = 0; i < _size; i++)
 			{
-				_coll.Add(i);
+				_collection.Add(i);
 			}
 
 			Sw.Stop();
-			Console.WriteLine("HashSet Add: " + Sw.ElapsedTicks);
+			Console.WriteLine("HashSet add: " + Sw.ElapsedTicks);
 			Sw.Reset();
 		}
 
@@ -32,11 +32,11 @@ namespace collections.Source
 			Sw.Start();
 			for (int i = 0; i < 100; i++)
 			{
-				_coll.Contains(rnd.Next(0, _size));
+				_collection.Contains(rnd.Next(0, _size));
 			}
 
 			Sw.Stop();
-			Console.WriteLine("HashSet Reach: " + Sw.ElapsedTicks);
+			Console.WriteLine("HashSet reach: " + Sw.ElapsedTicks);
 			Sw.Reset();
 		}
 	}

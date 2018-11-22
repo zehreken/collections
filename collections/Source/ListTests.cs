@@ -5,8 +5,9 @@ namespace collections.Source
 {
 	public sealed class ListTests : ATest, ITest
 	{
-		private List<object> _coll = new List<object>();
+		private readonly List<object> _collection = new List<object>();
 		private readonly int _size;
+
 		public ListTests(int size)
 		{
 			_size = size;
@@ -17,11 +18,11 @@ namespace collections.Source
 			Sw.Start();
 			for (int i = 0; i < _size; i++)
 			{
-				_coll.Add(i);
+				_collection.Add(i);
 			}
-			
+
 			Sw.Stop();
-			Console.WriteLine("List Add: " + Sw.ElapsedTicks);
+			Console.WriteLine("List add: " + Sw.ElapsedTicks);
 			Sw.Reset();
 		}
 
@@ -31,11 +32,11 @@ namespace collections.Source
 			Sw.Start();
 			for (int i = 0; i < 100; i++)
 			{
-				_coll.Contains(rnd.Next(0, _size));
+				_collection.Contains(rnd.Next(0, _size));
 			}
-			
+
 			Sw.Stop();
-			Console.WriteLine("List Reach: " + Sw.ElapsedTicks);
+			Console.WriteLine("List reach: " + Sw.ElapsedTicks);
 			Sw.Reset();
 		}
 	}

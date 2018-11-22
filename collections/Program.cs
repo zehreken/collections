@@ -12,9 +12,12 @@ namespace collections
 		{
 			const int size = 10000;
 
-//			_dictionaryTests = new DictionaryTests(size);
+			_dictionaryTests = new DictionaryTests(size);
 			_hashSetTests = new HashSetTests(size);
 			_listTests = new ListTests(size);
+			
+			_dictionaryTests.Add();
+			_dictionaryTests.Reach();
 			
 			_hashSetTests.Add();
 			_hashSetTests.Reach();
