@@ -2,7 +2,7 @@
 {
 	public interface ITest
 	{
-		void Add();
-		void Reach();
+		long Add();
+		long Reach();
 	}
 }

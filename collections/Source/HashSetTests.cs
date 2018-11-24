@@ -13,8 +13,9 @@ namespace collections.Source
 			_size = size;
 		}
 
-		public void Add()
+		public long Add()
 		{
+			Sw.Reset();
 			Sw.Start();
 			for (int i = 0; i < _size; i++)
 			{
@@ -22,13 +23,14 @@ namespace collections.Source
 			}
 
 			Sw.Stop();
-			Console.WriteLine("HashSet add: " + Sw.ElapsedTicks);
-			Sw.Reset();
+
+			return Sw.ElapsedTicks;
 		}
 
-		public void Reach()
+		public long Reach()
 		{
 			var rnd = new Random();
+			Sw.Reset();
 			Sw.Start();
 			for (int i = 0; i < 100; i++)
 			{
@@ -36,8 +38,8 @@ namespace collections.Source
 			}
 
 			Sw.Stop();
-			Console.WriteLine("HashSet reach: " + Sw.ElapsedTicks);
-			Sw.Reset();
+
+			return Sw.ElapsedTicks;
 		}
 	}
 }
